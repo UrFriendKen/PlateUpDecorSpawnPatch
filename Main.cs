@@ -11,7 +11,7 @@ namespace KitchenDecorSpawnPatch
     {
         public const string MOD_GUID = "IcedMilo.PlateUp.DecorSpawnPatch";
         public const string MOD_NAME = "Decor Spawn Patch";
-        public const string MOD_VERSION = "0.1.1";
+        public const string MOD_VERSION = "0.1.2";
 
         Harmony harmony;
         List<Assembly> PatchedAssemblies = new List<Assembly>();

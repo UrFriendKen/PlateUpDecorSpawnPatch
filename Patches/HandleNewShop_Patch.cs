@@ -13,18 +13,13 @@ namespace KitchenDecorSpawnPatch.Patches
         static readonly List<OpCode> OPCODES_TO_MATCH = new List<OpCode>()
         {
             OpCodes.Ldloc_S,
-            OpCodes.Ldc_I4_0,
-            OpCodes.Ceq,
-            OpCodes.Stloc_S,
-            OpCodes.Ldloc_S,
-            OpCodes.Brfalse,
-            OpCodes.Nop,
+            OpCodes.Brtrue,
             OpCodes.Ldarg_0,
             OpCodes.Ldc_I4_1,
             OpCodes.Call,
             OpCodes.Stloc_S,
             OpCodes.Ldc_I4_0,
-            OpCodes.Stloc_S,
+            OpCodes.Stloc_S
         };
 
         static readonly List<object> OPERANDS_TO_MATCH = new List<object>()
@@ -46,11 +41,6 @@ namespace KitchenDecorSpawnPatch.Patches
 
         static readonly List<OpCode> MODIFIED_OPCODES = new List<OpCode>()
         {
-            OpCodes.Nop,
-            OpCodes.Nop,
-            OpCodes.Nop,
-            OpCodes.Nop,
-            OpCodes.Nop,
             OpCodes.Nop,
             OpCodes.Nop,
             OpCodes.Nop,
